@@ -1,23 +1,6 @@
-# Redlock
-
-Redlock provides a Redis-based distributed mutual exclusion lock implementation for Go as described in this [post](https://redis.io/topics/distlock/).
-
-inspired by [redsync](https://github.com/go-redsync/redsync)
-
-## Installation
-
-Install Redlock using the go get command:
-
-```
-$ go get github.com/isollaa/redlock
-```
-
-## Usage
-
-```golang
 package main
 
-import "github.com/isollaa/redlock"
+import "redlock"
 
 func main() {
 	// setup config
@@ -49,8 +32,3 @@ func main() {
 		panic(err)
 	}
 }
-
-```
-
-## Disclaimer
-This code implements an algorithm which is currently a proposal, it was not formally analyzed. Make sure to understand how it works before using it in production environments.
